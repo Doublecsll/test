@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Escape Game</title>
+
+    <style>
+
+    </style>
+
+    <script>
+        function start() {
+            document.getElementById("start").hidden = true;
+            document.getElementById("p1").hidden = true;//start the game
+            document.getElementById("q1").hidden = false;
+            document.getElementById("q7").hidden = true;
+        }
+
+        function question1() {
+            if (document.getElementsByName("ans1")[0].value == "bamboo") {
+                alert("You're right,Let's get into the Monster Room!");
+                document.getElementById("q1").hidden = true;
+                document.getElementById("q2").hidden = false;
+            } else {
+                alert("You will get into the sliver Room.")
+                alert("Game over,please try again.")
+                document.getElementById("start").hidden = false;
+                document.getElementById("q1").hidden = true;
+            }
+        }//qustion 1
+
+        function question2() {
+            if (document.getElementsByName("ans2")[0].value == "woody") {
+                alert("You're right,Let's get into the Golden Room!");
+                document.getElementById("q1").hidden = true;
+                document.getElementById("q2").hidden = true;
+                document.getElementById("q3").hidden = false;
+            } else {
+                alert("Wrong answer.Game over,please try again.")
+                alert("Game over,please try again.")
+                document.getElementById("start").hidden = false;
+                document.getElementById("q2").hidden = true;
+            }
+        }//qustion 2
+
+        function question3() {
+            if (document.getElementsByName("ans3")[0].value == "california") {
+                alert("You're right,Let's get into the Oak Room!");
+                document.getElementById("q1").hidden = true;
+                document.getElementById("q2").hidden = true;
+                document.getElementById("q3").hidden = true;
+                document.getElementById("q4").hidden = false;
+            } else {
+                alert("Wrong answer.Game over,please try again.")
+                alert("Game over,please try again.")
+                document.getElementById("start").hidden = false;
+                document.getElementById("q3").hidden = true;
+            }
+        }//qustion 3
+
+        function question4() {
+            if (document.getElementsByName("ans4")[0].value == "pinocchio") {
+                alert("You're right,Let's get into the Diamond Room!");
+                document.getElementById("q1").hidden = true;
+                document.getElementById("q2").hidden = true;
+                document.getElementById("q3").hidden = true;
+                document.getElementById("q4").hidden = true;
+                document.getElementById("q5").hidden = false;
+            } else {
+                alert("Wrong answer.Game over,please try again.")
+                alert("Game over,please try again.")
+                document.getElementById("start").hidden = false;
+                document.getElementById("q4").hidden = true;
+            }
+        }//qustion 4
+
+        function question5() {
+            if (document.getElementsByName("ans5")[0].value == "deer") {
+                alert("You're right,Let's get into the Magician's Room!");
+                document.getElementById("q1").hidden = true;
+                document.getElementById("q2").hidden = true;
+                document.getElementById("q3").hidden = true;
+                document.getElementById("q4").hidden = true;
+                document.getElementById("q5").hidden = true;
+                document.getElementById("q6").hidden = false;
+            } else {
+                alert("Wrong answer.Game over,please try again.")
+                alert("Game over,please try again.")
+                document.getElementById("start").hidden = false;
+                document.getElementById("q5").hidden = true;
+            }
+        }//qustion 5
+
+        function question6() {
+            if (document.getElementsByName("ans6")[0].value == "chalk") {
+                alert("Congratulations,You win the game!");
+                document.getElementById("q1").hidden = true;
+                document.getElementById("q2").hidden = true;
+                document.getElementById("q3").hidden = true;
+                document.getElementById("q4").hidden = true;
+                document.getElementById("q5").hidden = true;
+                document.getElementById("q6").hidden = true;
+                document.getElementById("q7").hidden = false;
+            } else {
+                alert("Wrong answer.Game over,please try again.")
+                alert("Game over,please try again.")
+                document.getElementById("start").hidden = false;
+                document.getElementById("q6").hidden = true;
+            }
+        }//qustion 6
+
+        function question7() {
+           
+                alert("End game@@");
+               
+            
+        }//qustion 7
+
+    </script>
+
+</head>
+
+<body>
+    <h1>Escape NOW</h1>
+    <p id="p1">Click here to start the game!</p>
+    <div class=container>
+        <img src="./start.png" style="width: 200px; " id="start" onclick="start()">
+        <!-- question 1 bamboo-->
+        <div id="q1" hidden>
+            <p>What kind of plant does panda favorite?</p>
+            <input type="text" name="ans1">
+            <input type="button" id="btn" onclick="question1()" value="confirm">
+        </div>
+
+        <!-- question 2 ans woody -->
+        <div id="q2" hidden>
+            <p>What is the name of the toy cowboy in Toy Story?</p>
+            <input type="text" name="ans2">
+            <input type="button" id="btn1" onclick="question2()" value="confirm">
+        </div>
+        <!-- question 3 California-->
+        <div id="q3" hidden>
+            <p>Which state is famous for Hollywood?</p>
+            <input type="text" name="ans3">
+            <input type="button" id="btn2" onclick="question3()" value="confirm">
+        </div>
+        <!-- question 4 Pinocchio -->
+        <div id="q4" hidden>
+            <p>Whose nose grew longer every time he lied?</p>
+            <input type="text" name="ans4">
+            <input type="button" id="btn3" onclick="question4()" value="confirm">
+        </div>
+        <!-- question 5 A female deer-->
+        <div id="q5" hidden>
+            <p>What is a doe?</p>
+            <input type="text" name="ans5">
+            <input type="button" id="btn4" onclick="question5()" value="confirm">
+        </div>
+        <!-- question 6 Chalk-->
+        <div id="q6" hidden>
+            <p id="q6p">What do you use to write on a blackboard?</p>
+            <input type="text" name="ans6">
+            <input type="button" id="btn5" onclick="question6()" value="confirm">
+        </div>
+
+        <div id="q7" hidden>
+            <p>Play again?</p>
+            <input type="button" id="btn6" onclick="start()" value="Yes!">
+            <input type="button" id="btn7" onclick="question7()" value="No">
+        </div>
+
+    </div>
+
+
+
+
+
+</body>
+
+</html>
